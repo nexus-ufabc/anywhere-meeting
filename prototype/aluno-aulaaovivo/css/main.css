@@ -7,7 +7,7 @@ body {
 .v41_2 {
   width: 100%;
   height: 1080px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -43,7 +43,7 @@ body {
 .v41_5 {
   width: 185px;
   height: 60px;
-  background: rgba(255,106,106,1);
+  background: rgba(255, 106, 106, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -57,7 +57,7 @@ body {
 .v41_6 {
   width: 33px;
   height: 33px;
-  background: rgba(255,251,251,1);
+  background: rgba(255, 251, 251, 1);
   opacity: 1;
   position: absolute;
   top: 14px;
@@ -66,7 +66,7 @@ body {
 }
 .v41_7 {
   width: 80px;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 16px;
   left: 74px;
@@ -78,7 +78,7 @@ body {
 }
 .v41_8 {
   width: 659px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 16px;
   left: 211px;
@@ -104,7 +104,7 @@ body {
 .v41_10 {
   width: 100%;
   height: 587px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -118,7 +118,7 @@ body {
 .v41_11 {
   width: 264px;
   height: 15px;
-  background: rgba(196,196,196,1);
+  background: rgba(196, 196, 196, 1);
   opacity: 1;
   position: absolute;
   top: 495px;
@@ -131,8 +131,8 @@ body {
   overflow: hidden;
 }
 .v41_12 {
-  width: 100%;
-  color: rgba(0,0,0,1);
+  width: 95%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 25px;
   left: 26px;
@@ -156,7 +156,7 @@ body {
 .v41_14 {
   width: 100%;
   height: 132px;
-  background: rgba(78,78,78,1);
+  background: rgba(78, 78, 78, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -165,7 +165,7 @@ body {
 }
 .v41_15 {
   width: 534px;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 51px;
   left: 29px;
@@ -176,7 +176,7 @@ body {
 .v41_16 {
   width: 47px;
   height: 47px;
-  background: rgba(255,251,251,1);
+  background: rgba(255, 251, 251, 1);
   opacity: 1;
   position: absolute;
   top: 43px;
@@ -186,7 +186,7 @@ body {
 .v41_17 {
   width: 47px;
   height: 47px;
-  background: rgba(255,251,251,1);
+  background: rgba(255, 251, 251, 1);
   opacity: 1;
   position: absolute;
   top: 43px;
@@ -196,7 +196,7 @@ body {
 .v41_18 {
   width: 47px;
   height: 47px;
-  background: rgba(255,251,251,1);
+  background: rgba(255, 251, 251, 1);
   opacity: 1;
   position: absolute;
   top: 43px;
@@ -258,7 +258,7 @@ body {
 .v41_23 {
   width: 100%;
   height: 73px;
-  background: rgba(34,196,196,1);
+  background: rgba(34, 196, 196, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -281,7 +281,7 @@ body {
 .v41_24 {
   width: 63px;
   height: 10px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -295,7 +295,7 @@ body {
 .v41_25 {
   width: 63px;
   height: 10px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 17px;
@@ -309,7 +309,7 @@ body {
 .v41_26 {
   width: 63px;
   height: 10px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 34px;
@@ -322,7 +322,7 @@ body {
 }
 .v41_27 {
   width: 281px;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 20px;
   left: 820px;
@@ -348,7 +348,7 @@ body {
 .v41_29 {
   width: 302px;
   height: 60px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -361,7 +361,7 @@ body {
 }
 .v41_30 {
   width: 202px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 16px;
   left: 20px;
@@ -413,7 +413,7 @@ body {
 .v41_34 {
   width: 34px;
   height: 6px;
-  background: rgba(41,178,255,1);
+  background: rgba(41, 178, 255, 1);
   opacity: 1;
   position: absolute;
   top: 44px;
@@ -428,7 +428,7 @@ body {
 .v41_35 {
   width: 55px;
   height: 6px;
-  background: rgba(41,178,255,1);
+  background: rgba(41, 178, 255, 1);
   opacity: 1;
   position: absolute;
   top: 55px;
@@ -443,7 +443,7 @@ body {
 .v41_36 {
   width: 34px;
   height: 6px;
-  background: rgba(41,178,255,1);
+  background: rgba(41, 178, 255, 1);
   opacity: 1;
   position: absolute;
   top: 44px;
@@ -458,7 +458,7 @@ body {
 .v41_37 {
   width: 34px;
   height: 6px;
-  background: rgba(41,178,255,1);
+  background: rgba(41, 178, 255, 1);
   opacity: 1;
   position: absolute;
   top: 44px;
@@ -473,7 +473,7 @@ body {
 .v41_38 {
   width: 55px;
   height: 6px;
-  background: rgba(41,178,255,1);
+  background: rgba(41, 178, 255, 1);
   opacity: 1;
   position: absolute;
   top: 55px;
@@ -487,7 +487,7 @@ body {
 }
 .v41_39 {
   width: 186px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 13px;
   left: 108px;
@@ -513,12 +513,12 @@ body {
 .v41_41 {
   width: 44px;
   height: 44px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -554,12 +554,12 @@ body {
 .v41_44 {
   width: 212px;
   height: 44px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -568,7 +568,7 @@ body {
 }
 .v41_45 {
   width: 141px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 6px;
   left: 71px;
@@ -607,12 +607,12 @@ body {
 .v41_48 {
   width: 44px;
   height: 44px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -648,12 +648,12 @@ body {
 .v41_51 {
   width: 44px;
   height: 44px;
-  background: rgba(196,196,196,1);
+  background: rgba(196, 196, 196, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -688,7 +688,7 @@ body {
 }
 .v41_54 {
   width: 155px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 8px;
   left: 0px;
@@ -701,12 +701,12 @@ body {
 .v41_55 {
   width: 44px;
   height: 44px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 158px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -716,12 +716,12 @@ body {
 .v41_56 {
   width: 44px;
   height: 44px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 233px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -731,12 +731,12 @@ body {
 .v41_57 {
   width: 102px;
   height: 44px;
-  background: rgba(196,196,196,1);
+  background: rgba(196, 196, 196, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 308px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -758,7 +758,7 @@ body {
 }
 .v41_59 {
   width: 68px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 8px;
   left: 325px;
@@ -796,7 +796,7 @@ body {
 }
 .v41_62 {
   width: 155px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 8px;
   left: 0px;
@@ -809,12 +809,12 @@ body {
 .v41_63 {
   width: 44px;
   height: 44px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 158px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -824,12 +824,12 @@ body {
 .v41_64 {
   width: 44px;
   height: 44px;
-  background: rgba(229,229,229,1);
+  background: rgba(229, 229, 229, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 233px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -839,12 +839,12 @@ body {
 .v41_65 {
   width: 102px;
   height: 44px;
-  background: rgba(196,196,196,1);
+  background: rgba(196, 196, 196, 1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 308px;
-  border: 3px solid rgba(196,196,196,1);
+  border: 3px solid rgba(196, 196, 196, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -866,7 +866,7 @@ body {
 }
 .v41_67 {
   width: 68px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 8px;
   left: 325px;

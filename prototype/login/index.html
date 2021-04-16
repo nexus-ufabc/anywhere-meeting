@@ -1,1 +1,85 @@
-<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Amiko&display=swap" rel="stylesheet" /><link href="./css/main.css" rel="stylesheet" /><title>Document</title></head><body><div class="v37_1072"><div class="v37_1073"><div class="v37_1074"></div><span class="v37_1075">Seja bem vindo!</span><div class="v37_1076"></div><span class="v37_1077">Usuário</span><div class="v37_1078"></div><span class="v37_1079">Senha</span><span class="v37_1080">Ou acesse como</span><span class="v37_1081">Esqueci minha senha</span><div class="v37_1082"></div><span class="v37_1083">LOGAR</span><div class="v37_1084"></div><span class="v37_1085">VISITANTE</span></div><div class="v37_1086"><div class="v37_1087"></div><div class="v37_1088"></div><div class="v37_1089"></div><div class="v37_1090"></div><span class="v37_1091">Anywhere Meeting</span><div class="v37_1092"><div class="v37_1093"></div><div class="v37_1094"></div></div></div><div class="v37_1095"><div class="v37_1096"></div><span class="v37_1097"> Nexus | Sociotechnical Systems Research Initiative</span><div class="v37_1098"></div><div class="v37_1099"></div><div class="v37_1100"></div><div class="v37_1101"></div><div class="v37_1102"></div><div class="v37_1103"></div></div><span class="v37_1104">nexus</span><span class="v37_1105">**********</span></div></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amiko&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Anywhere Meeting :: Login</title>
+  </head>
+  <script type="text/javascript">
+    function zoomIt() {
+      var scale = "scale(1)";
+      document.body.style.webkitTransform = scale; // Chrome, Opera, Safari
+      document.body.style.msTransform = scale; // IE 9
+      document.body.style.transform = scale; // Gener
+    }
+
+    function zoom() {
+      document.body.style.zoom = "75%";
+    }
+
+    function login_Click() {
+      var login = document.getElementById("login").value;
+      var password = document.getElementById("password").value;
+
+      if (login == "professorpaulo" && password == "1234") {
+        window.location.href = "../prof-home/index.html";
+      } else if (login == "alunopedro" && password == "5678") {
+        window.location.href = "../aluno-home/index.html";
+      } else {
+        alert("Login ou senha inválidos!");
+      }
+    }
+  </script>
+  <body onload="zoom()">
+    <div class="v37_1072">
+      <div class="v37_1073">
+        <div class="v37_1074"></div>
+        <span class="v37_1075">Seja bem vindo!</span>
+        <div class="v37_1076"></div>
+        <span class="v37_1077">Usuário</span>
+        <div class="v37_1078"></div>
+        <span class="v37_1079">Senha</span
+        ><span class="v37_1080">Ou acesse como</span
+        ><span class="v37_1081">Esqueci minha senha</span>
+        <div class="v37_1082"></div>
+        <a href="javascript:login_Click();">
+          <span class="v37_1083">LOGAR</span>
+        </a>
+        <div class="v37_1084"></div>
+        <span class="v37_1085">VISITANTE</span>
+      </div>
+      <div class="v37_1086">
+        <div class="v37_1087"></div>
+        <div class="v37_1088"></div>
+        <div class="v37_1089"></div>
+        <div class="v37_1090"></div>
+        <span class="v37_1091">Anywhere Meeting</span>
+        <div class="v37_1092">
+          <div class="v37_1093"></div>
+          <div class="v37_1094"></div>
+        </div>
+      </div>
+      <div class="v37_1095">
+        <div class="v37_1096"></div>
+        <span class="v37_1097">
+          Nexus | Sociotechnical Systems Research Initiative</span
+        >
+        <div class="v37_1098"></div>
+        <div class="v37_1099"></div>
+        <div class="v37_1100"></div>
+        <div class="v37_1101"></div>
+        <div class="v37_1102"></div>
+        <div class="v37_1103"></div>
+      </div>
+      <input id="login" type="text" class="v37_1104" size="16" />
+      <input id="password" type="password" class="v37_1105" />
+    </div>
+  </body>
+</html>
