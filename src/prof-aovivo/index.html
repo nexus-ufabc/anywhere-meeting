@@ -13,8 +13,72 @@
     <title>Anywhere Meeting :: Professor - Ministrar ao vivo</title>
   </head>
   <script type="text/javascript">
+    var speechRecon = new webkitSpeechRecognition();
+    speechRecon.continuous = true;
+    speechRecon.interimResults = true;
+
+    var recognizing = false;
+    var micactive = false;
+    var final_transcript = "";
+    var startTime;
+    var endTime;
+    var elapsedTime = 0;
+
+    speechRecon.onstart = function () {
+      startTime = new Date();
+      console.log("speechRecon.onstart");
+    };
+
+    speechRecon.onend = function () {
+      if (recognizing) {
+        console.log("Restarting the function. Partial recording");
+        speechRecon.start();
+      } else {
+        endTime = new Date();
+        elapsedTime = elapsedTime + (endTime.valueOf() - startTime.valueOf()) / (1000);
+        document.getElementById("duracao").textContent = new Date(elapsedTime * 1000).toISOString().substr(11, 8);
+        console.log("Ending the function");
+      }
+    };
+
+    speechRecon.onresult = function (event) {
+      if (typeof event.results == "undefined") {
+        speechRecon.onend = null;
+        speechRecon.stop();
+        return;
+      }
+      for (var i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          final_transcript += event.results[i][0].transcript;
+        } else {
+          interim_transcript += event.results[i][0].transcript;
+        }
+      }
+      document.getElementById("readable-text").value = final_transcript;
+    };
+
+    function transmissaoOnClick() {
+      if (micactive) {
+        micactive = false;
+        document.getElementById("mic_img").style.backgroundImage = "url(images/microphone.png)";
+        document.getElementById("transmissaoText").textContent="Aguardando";
+        recognizing = false;
+        speechRecon.stop();
+      } else {
+        micactive = true;
+        document.getElementById("mic_img").style.backgroundImage="url(images/microphone-active.png)";
+        document.getElementById("transmissaoText").textContent="Gravando";
+        speechRecon.lang = "pt-BR";
+        recognizing = true;
+        speechRecon.start();
+      }
+    }
+
     function zoom() {
       document.body.style.zoom = "75%";
+
+      var dt = new Date();
+      document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear());
     }
   </script>
   <body onload="zoom()">
@@ -28,7 +92,13 @@
         <span class="v49_479">Introdução às metodologias ágeis</span>
       </div>
       <div class="v49_480">
-        <div class="v49_481"></div>
+        <div class="v49_481">
+          <br />
+          <textarea
+            id="readable-text"
+            style="width: 1235px; height: 480px; font-size: xx-large;"
+          ></textarea>
+        </div>
         <div class="v49_482"></div>
       </div>
       <div class="v49_484">
@@ -68,35 +138,39 @@
         <div class="v49_509"></div>
         <div class="v49_510"></div>
       </div>
-      <span class="v49_511">Clique para iniciar a transmissão</span
-      ><span class="v49_512">Dados da tramissão</span
+      <a href="javascript:transmissaoOnClick();">
+      <span class="v49_511">Clique para iniciar ou interromper a transmissão</span>
+      </a>
+      <span class="v49_512">Dados da tramissão</span
       ><span class="v49_513"
         >Clique para corrigir palavras no campo de transcrição. Atenção: a
         transmissão será pausada.</span
       >
       <div class="v49_514">
+        <a href="javascript:transmissaoOnClick();">
         <div class="v49_515"></div>
-        <div class="v49_541">
-          <div class="v49_542">
-            <div class="v49_543"></div>
-            <div class="v49_544"></div>
-            <div class="v49_545"></div>
-            <div class="v49_546"></div>
-            <div class="v49_547"></div>
+          <div class="v49_541">
+            <div class="v49_542">
+              <div class="v49_543"></div>
+              <div class="v49_544"></div>
+              <div class="v49_545"></div>
+              <div class="v49_546"></div>
+              <div class="v49_547"></div>
+            </div>
+            <span id="transmissaoText" class="v49_548">Aguardando</span>
           </div>
-          <span class="v49_548">Aguardando</span>
-        </div>
-        <div class="v49_549"></div>
+        <div id="mic_img" class="v49_549"></div>
       </div>
+    </a>
       <div class="v49_525">
         <span class="v49_526">Duração</span>
         <div class="v49_527"></div>
-        <span class="v49_528">00:00:00</span>
+        <span id="duracao" class="v49_528">00:00:00</span>
       </div>
       <div class="v49_529">
         <span class="v49_530">Data</span>
         <div class="v49_531"></div>
-        <span class="v49_532">28/02/21</span>
+        <span id="datetime" class="v49_532"></span>
       </div>
     </div>
   </body>
