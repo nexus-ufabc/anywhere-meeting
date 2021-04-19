@@ -3,10 +3,11 @@
 }
 body {
   font-size: 14px;
+  zoom: 75%;
 }
 .v37_1072 {
   width: 100%;
-  height: 1080px;
+  height: 100%;
   background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: relative;

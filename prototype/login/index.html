@@ -9,10 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Amiko&display=swap"
       rel="stylesheet"
     />
-    <link href="./css/main.css" rel="stylesheet" />
+    <link defer href="./css/main.css" rel="stylesheet" />
     <title>Anywhere Meeting :: Login</title>
   </head>
-  <script type="text/javascript">
+  <script defer type="text/javascript">
     function zoomIt() {
       var scale = "scale(1)";
       document.body.style.webkitTransform = scale; // Chrome, Opera, Safari
@@ -20,9 +20,7 @@
       document.body.style.transform = scale; // Gener
     }
 
-    function zoom() {
-      document.body.style.zoom = "75%";
-    }
+    
 
     function login_Click() {
       var login = document.getElementById("login").value;
@@ -37,7 +35,7 @@
       }
     }
   </script>
-  <body onload="zoom()">
+  <body>
     <div class="v37_1072">
       <div class="v37_1073">
         <div class="v37_1074"></div>
