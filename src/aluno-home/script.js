@@ -1,5 +1,5 @@
 function aoVivo_Click() {
-        window.location.href = "../aluno-aulaaovivo/index.html";
+        window.location.href = "../aluno-aulaaovivo/index.php";
 }
 
 function verArquivo_Click() {

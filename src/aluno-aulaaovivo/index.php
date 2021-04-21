@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link defer
+    <link
+      defer
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link defer
+    <link
+      defer
       href="https://fonts.googleapis.com/css?family=Amiko&display=swap"
       rel="stylesheet"
     />
@@ -73,7 +75,7 @@
       </div>
       <div class="v41_22">
         <div class="v41_23"></div>
-        <a href="../aluno-home/index.html">
+        <a href="../aluno-home/index.php">
           <div class="v47_22">
             <div class="v41_24"></div>
             <div class="v41_25"></div>
@@ -87,7 +89,7 @@
           <div class="v41_31"></div>
         </div>
       </div>
-      <div class="v41_32" style="display: none !important;">
+      <div class="v41_32" style="display: none !important">
         <div class="v41_33">
           <div class="v41_34"></div>
           <div class="v41_35"></div>
@@ -104,7 +106,7 @@
         </a>
       </div>
       <div class="v41_43">
-        <a href="../aluno-home/index.html">
+        <a href="../aluno-home/index.php">
           <div class="v47_22">
             <div class="v41_24"></div>
             <div class="v41_25"></div>

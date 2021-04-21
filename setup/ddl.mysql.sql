@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS Aulas
  Codigo varchar(255) NOT NULL UNIQUE,
  Data DATETIME NOT NULL,
  Descricao varchar(255) NOT NULL,
+ Aovivo int NOT NULL DEFAULT 0,
  Transcript text NULL,
  FOREIGN KEY (IdProfessor) REFERENCES Professores (Id) ON DELETE CASCADE
 );

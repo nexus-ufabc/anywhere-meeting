@@ -12,7 +12,7 @@ function login_Click() {
         if (login == "professorpaulo" && password == "1234") {
                 window.location.href = "../prof-home/index.html";
         } else if (login == "alunopedro" && password == "5678") {
-                window.location.href = "../aluno-home/index.html";
+                window.location.href = "../aluno-home/index.php";
         } else {
                 alert("Login ou senha inválidos!");
         }

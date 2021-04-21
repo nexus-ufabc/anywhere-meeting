@@ -28,13 +28,21 @@
         if (isset($_POST['transcript']) && !empty($_POST['transcript'])) { 
           $codigo = $_POST['codigo'];
           $transcript = $_POST['transcript'];
-          $sqlInsert = "UPDATE Aulas SET Transcript = '{$transcript}' WHERE Codigo = '{$codigo}'";
-          if ($conn->query($sqlInsert) === FALSE) {
-            echo "Error: " . $sqlInsert . "<br>" . $conn->error;          
+          $sqlUpdate = "UPDATE Aulas SET Transcript = '{$transcript}' WHERE Codigo = '{$codigo}'";
+          if ($conn->query($sqlUpdate) === FALSE) {
+            echo "Error: " . $sqlUpdate . "<br>" . $conn->error;          
           }
           echo "update-transcript command executed successfully";
         }
         break;
+      case 'update-aovivo':
+        $codigo = $_POST['codigo'];
+        $aovivo = $_POST['aovivo'];
+        $sqlUpdateAovivo = "UPDATE Aulas SET Aovivo = $aovivo WHERE Codigo = '{$codigo}'";
+        if ($conn->query($sqlUpdateAovivo) === FALSE) {
+          echo "Error: " . $sqlUpdateAovivo . "<br>" . $conn->error;          
+        }
+        echo "update-aovivo command executed successfully";
       default:
         echo "Nothing is done here: Unkown $command found.";
     }

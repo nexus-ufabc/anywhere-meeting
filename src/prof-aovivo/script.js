@@ -50,92 +50,108 @@ speechRecon.onresult = function (event) {
 
 function updateTranscriptFile(codigo, final_transcript) {
   $.ajax({
-          url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
-          type: 'POST',
-          data: {command: 'update-transcript', codigo: codigo, transcript: final_transcript},
-          success:function(response){
-            console.log('Success: '+response);
-          },
-          error:function(x,e){
-            console.log('Unknow Error.\n'+x.responseText);
-          }
+    url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
+    type: 'POST',
+    data: {command: 'update-transcript', codigo: codigo, transcript: final_transcript},
+    success:function(response){
+      console.log('Success: '+response);
+    },
+    error:function(x,e){
+      console.log('Unknow Error.\n'+x.responseText);
+    }
   });
 }
 
 function insertNovaAula(codigo, descricao) {
-        $.ajax({
-                url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
-                type: 'POST',
-                data: {command: 'new-aula', codigo: codigo, descricao: descricao},
-                success:function(response){
-                  console.log('Success: '+response);
-                },
-                error:function(x,e){
-                  console.log('Unknow Error.\n'+x.responseText);
-                }
-        });
+  $.ajax({
+    url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
+    type: 'POST',
+    data: {command: 'new-aula', codigo: codigo, descricao: descricao},
+    success:function(response){
+      console.log('Success: '+response);
+    },
+    error:function(x,e){
+      console.log('Unknow Error.\n'+x.responseText);
+    }
+  });
+}
+
+function updateAovivo(codigo, aovivo) {
+  $.ajax({
+    url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
+    type: 'POST',
+    data: {command: 'update-aovivo', codigo: codigo, aovivo: aovivo},
+    success:function(response){
+      console.log('Success: '+response);
+    },
+    error:function(x,e){
+      console.log('Unknow Error.\n'+x.responseText);
+    }
+  });
 }
 
 function getNewGuid(){
-        var dt = new Date().getTime();
-        var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-            var r = (dt + Math.random()*16)%16 | 0;
-            dt = Math.floor(dt/16);
-            return (c=='x' ? r :(r&0x3|0x8)).toString(16);
-        });
-        return uuid;
+  var dt = new Date().getTime();
+  var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = (dt + Math.random()*16)%16 | 0;
+      dt = Math.floor(dt/16);
+      return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+  });
+  return uuid;
 }
 
 function novaTransmissaoOnClick() {
-        if (ongoing_class == false) {
-                var codigo = getNewGuid();
-                var descricao = document.getElementById("nomeAula").value;
-                console.log(codigo);
+  if (ongoing_class == false) {
+    var codigo = getNewGuid();
+    var descricao = document.getElementById("nomeAula").value;
+    console.log(codigo);
 
-                document.getElementById("nomeAula").readOnly = true;
-                document.getElementById("codigoAula").value = codigo;
-                document.getElementById("labelTransmissao").textContent = "Pronto";
+    document.getElementById("nomeAula").readOnly = true;
+    document.getElementById("codigoAula").value = codigo;
+    document.getElementById("labelTransmissao").textContent = "Pronto";
 
-                insertNovaAula(codigo, descricao);
-                ongoing_class = true;
-        }
+    insertNovaAula(codigo, descricao);
+    ongoing_class = true;
+  }
 }
 
 function encerrarAulaOnClick() {
-        if (micactive) {
-                micactive = false;
-                recognizing = false;
-                ongoing_class = false;
-                speechRecon.stop();
-                document.getElementById("mic_img").style.backgroundImage = "url(images/microphone.png)";
-                document.getElementById("transmissaoText").textContent="Aguardando";
-                document.getElementById("nomeAula").value = "";
-                document.getElementById("nomeAula").readOnly = false;
-                document.getElementById("labelTransmissao").textContent = "Iniciar";
-                document.getElementById("divTransmissao").style.backgroundColor = "rgba(78, 78, 78, 1)";
-                document.getElementById("readable-text").value = "";
-        }
+  if (micactive) {
+    micactive = false;
+    recognizing = false;
+    ongoing_class = false;
+    speechRecon.stop();
+    updateAovivo(document.getElementById("codigoAula").value, 0);
+    document.getElementById("mic_img").style.backgroundImage = "url(images/microphone.png)";
+    document.getElementById("transmissaoText").textContent="Aguardando";
+    document.getElementById("nomeAula").value = "";
+    document.getElementById("nomeAula").readOnly = false;
+    document.getElementById("labelTransmissao").textContent = "Iniciar";
+    document.getElementById("divTransmissao").style.backgroundColor = "rgba(78, 78, 78, 1)";
+    document.getElementById("readable-text").value = "";
+  }
 }
 
 function transmissaoOnClick() {
-        if (ongoing_class == false) {
-                alert("É necessário iniciar uma Aula antes de transmitir!");
-        }
-        else {
-                if (micactive) {
-                        encerrarAulaOnClick();
-                } 
-                else {
-                        micactive = true;
-                        document.getElementById("mic_img").style.backgroundImage="url(images/microphone-active.png)";
-                        document.getElementById("transmissaoText").textContent="Gravando";
-                        document.getElementById("labelTransmissao").textContent = "Ao vivo";
-                        document.getElementById("divTransmissao").style.backgroundColor = "rgba(255, 106, 106, 1)";
-                        speechRecon.lang = "pt-BR";
-                        recognizing = true;
-                        speechRecon.start();
-                }
-        }
+  if (ongoing_class == false) {
+    alert("É necessário iniciar uma Aula antes de transmitir!");
+  }
+  else {
+    if (micactive) {
+            encerrarAulaOnClick();
+    } 
+    else {
+            micactive = true;
+            document.getElementById("mic_img").style.backgroundImage="url(images/microphone-active.png)";
+            document.getElementById("transmissaoText").textContent="Gravando";
+            document.getElementById("labelTransmissao").textContent = "Ao vivo";
+            updateAovivo(document.getElementById("codigoAula").value, 1);
+            document.getElementById("divTransmissao").style.backgroundColor = "rgba(255, 106, 106, 1)";
+            speechRecon.lang = "pt-BR";
+            recognizing = true;
+            speechRecon.start();
+    }
+  }
 }
 
 function loadDatetime() {
