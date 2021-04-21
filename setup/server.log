@@ -1,0 +1,24 @@
+mysql
+root
+50otP@55word
+
+sudo cp -R /Users/danieldangeloresendebarros/Projects/anywhere-meeting/ /Library/WebServer/Documents/anywhere-meeting
+
+http://localhost/anywhere-meeting/src/login/index.html
+
+[~/anywhere-meeting$]
+$ /usr/local/mysql/bin/mysql -uroot -p
+[50otP@55word]
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '50otP@55word';
+mysql> FLUSH PRIVILEGES;
+mysql> CREATE DATABASE DBAWM;
+mysql> CREATE USER 'adminawm'@'localhost' IDENTIFIED BY '@dminAWM123';
+mysql> GRANT ALL PRIVILEGES ON DBAWM.* TO 'adminawm'@'localhost';
+mysql> FLUSH PRIVILEGES;
+mysql> ALTER USER 'adminawm'@'localhost' IDENTIFIED WITH mysql_native_password BY '@dminAWM123';
+mysql> FLUSH PRIVILEGES;
+mysql> EXIT;
+$ /usr/local/mysql/bin/mysql -u adminawm -p 
+mysql> USE DBAWM;
+mysql> source setup/ddl.mysql.sql
+mysql> source setup/poc.sql

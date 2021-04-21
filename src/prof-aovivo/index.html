@@ -9,29 +9,36 @@
       href="https://fonts.googleapis.com/css?family=Amiko&display=swap"
       rel="stylesheet"
     />
-    <link defer href="./css/main.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
     <title>Anywhere Meeting :: Professor - Ministrar ao vivo</title>
-    <script defer type="text/javascript" src="./script.js"></script>
   </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
   <body onload="loadDatetime()">
     <div class="v49_473">
       <div class="v49_474">
-        <div class="v49_475">
-          <div class="v49_476"></div>
-          <div class="v49_477"></div>
-          <span class="v49_478">Ao vivo</span>
-        </div>
-        <span class="v49_479">Introdução às metodologias ágeis</span>
+        <a href="javascript:novaTransmissaoOnClick();">
+          <div class="v49_475">
+            <div id="divTransmissao" class="v49_476"></div>
+            <div class="v49_477"></div>
+            <span id="labelTransmissao" class="v49_478">Iniciar</span>
+          </div>
+        </a>
+        <span class="v49_479">
+          <input type="text" id="nomeAula" style="width: 360px; height: 43px; font-size: x-large  ;">
+          <input type="hidden" id="codigoAula" value="">
+        </span>
       </div>
       <div class="v49_480">
         <div class="v49_481">
           <br />
           <textarea
             id="readable-text"
+            readonly
             style="width: 1235px; height: 480px; font-size: xx-large;"
           ></textarea>
         </div>
-        <!-- <div class="v49_482"></div> -->
+        <div class="v49_482"></div>
       </div>
       <div class="v49_484">
         <div class="v49_485"></div>
@@ -45,13 +52,13 @@
         <div class="v49_491"></div>
         <div class="v49_492"></div>
       </div>
-      <div class="v49_493">
-        <a href="../prof-home/index.html">
+      <a href="javascript:encerrarAulaOnClick();">
+        <div class="v49_493">
           <div class="v49_494"></div>
           <span class="v49_495">Encerrar aula</span>
           <div class="v49_496"></div>
-        </a>
-      </div>
+        </div>
+      </a>
       <div class="v49_497">
         <div class="v49_498"></div>
         <a href="../prof-home/index.html">
@@ -76,9 +83,7 @@
       <span class="v49_511">Clique para iniciar ou interromper a transmissão</span>
       </a>
       <span class="v49_512">Dados da tramissão</span
-      ><span class="v49_513"
-        >Clique para corrigir palavras no campo de transcrição. Atenção: a
-        transmissão será pausada.</span
+      ><span class="v49_513"></span
       >
       <div class="v49_514">
         <a href="javascript:transmissaoOnClick();">
