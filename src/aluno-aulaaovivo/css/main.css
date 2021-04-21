@@ -55,6 +55,20 @@ body {
   border-bottom-right-radius: 17px;
   overflow: hidden;
 }
+.v41_52 {
+  width: 185px;
+  height: 60px;
+  background: rgba(78, 78, 78, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  overflow: hidden;
+}
 .v41_6 {
   width: 33px;
   height: 33px;

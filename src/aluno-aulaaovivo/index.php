@@ -1,6 +1,11 @@
 <!DOCTYPE html>
+<?php
+  $page = $_SERVER['PHP_SELF'];
+  $sec = "3";
+?>
 <html>
   <head>
+    <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     <link
       defer
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
@@ -19,48 +24,51 @@
     <div class="v41_2">
       <div class="v41_3">
         <div class="v41_4">
-          <div class="v41_5"></div>
-          <div class="v41_6"></div>
-          <span class="v41_7">Ao vivo</span>
-        </div>
-        <span class="v41_8"
-          >Paulo Castro em “Introdução às metodologias ágeis”</span
-        >
-      </div>
-      <div class="v41_9">
-        <div class="v41_10"></div>
-        <div class="v41_11"></div>
-        <span class="v41_12"
-          >Uma história de usuário é a menor unidade de trabalho em uma
-          estrutura ágil. É um objetivo final, não um recurso, expresso da
-          perspectiva do usuário do software. Uma história do usuário é uma
-          explicação informal e geral sobre um recurso de software escrita a
-          partir da perspectiva do usuário final ou cliente. O objetivo de uma
-          história de usuário é articular como uma única tarefa pode oferecer um
-          determinado valor ao cliente. Observe que “clientes” não precisam ser
-          usuários finais externos no sentido tradicional; também podem ser
-          clientes internos ou colegas na empresa que dependem da sua equipe.
-          Histórias de usuários são algumas frases em linguagem simples que
-          delineiam o resultado desejado. Elas não entram em detalhes. Os
-          requisitos são adicionados mais tarde, assim que a equipe entrar em
-          acordo. Histórias se encaixam perfeitamente em estruturas ágeis como
-          Scrum e Kanban. No Scrum, histórias de usuários são adicionadas a
-          sprints e “queimadas” ao longo do sprint. Nas equipes Kanban, as
-          histórias de usuários são colocadas no backlog e executadas por meio
-          do fluxo de trabalho. É esse trabalho com as histórias de usuários que
-          ajuda as equipes Scrum a melhorar na estimativa e planejamento de
-          sprints, levando a previsões mais precisas e maior agilidade. Graças
-          às histórias, as equipes Kanban aprendem a gerenciar o trabalho em
-          andamento (WIP, work in progress) e podem refinar ainda mais seus
-          fluxos de trabalho. Histórias de usuários também são os blocos de
-          construção de estruturas ágeis maiores, como epics e iniciativas.
-          Epics são grandes itens de trabalho divididos em um conjunto de
-          histórias, e vários epics compõem uma iniciativa. Essas estruturas
-          maiores garantem que o trabalho diário da equipe de desenvolvimento
-          (nas lojas) contribua para os objetivos organizacionais incorporados
-          em epics e iniciativas.
-        </span>
-      </div>
+        <?php
+          $servername = "127.0.0.1";
+          $username = "adminawm";
+          $password = "@dminAWM123";
+          $dbname = "DBAWM";
+
+          // Create connection
+          $conn = new mysqli($servername, $username, $password, $dbname);
+          // Check connection
+          if ($conn->connect_error) {
+              echo "Error: <br>" . $conn->connect_error;          
+              die("Connection failed: " . $conn->connect_error);
+          } 
+
+          $transcript = "";
+          $sql = "SELECT * FROM Aulas WHERE IdProfessor = 1 AND Aovivo = 1";
+          $result = mysqli_query($conn, $sql);
+          if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($result)) {
+              printf("<div class='v41_5'></div>");
+              printf("<div class='v41_6'></div>");
+              printf("<span class='v41_7'>Ao vivo</span>");
+              printf("</div>");
+              printf("<span class='v41_8'>%s</span>", $row["Descricao"]);
+              $transcript = $row["Transcript"];
+            }
+          } 
+          else {
+            printf("<div></div>");
+            printf("<div></div>");
+            printf("<span>&nbsp;</span>");
+            printf("</div>");
+            printf("<span class='v41_8'>Nenhuma aula online no momento</span>");
+          }
+
+          printf("</div>");
+          printf("<div class='v41_9'>");
+          printf("<div class='v41_10'></div>");
+          printf("<div class='v41_11'></div>");
+          printf("<span class='v41_12'>%s</span>", $transcript);
+          printf("</div>");
+
+          mysqli_close($conn);
+        ?>
       <div class="v41_13">
         <div class="v41_14"></div>
         <span class="v41_15">
@@ -150,7 +158,7 @@
         <a onclick="increase('.v41_67')">
           <div class="v41_66"></div>
         </a>
-        <span class="v41_67">1.7x</span>
+        <span class="v41_67">1.0x</span>
         <a onclick="decrease('.v41_67')">
           <div class="v41_68"></div>
         </a>
