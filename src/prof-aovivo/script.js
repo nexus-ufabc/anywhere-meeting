@@ -50,7 +50,7 @@ speechRecon.onresult = function (event) {
 
 function updateTranscriptFile(codigo, final_transcript) {
   $.ajax({
-    url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
+    url: 'command_functions.php',
     type: 'POST',
     data: {command: 'update-transcript', codigo: codigo, transcript: final_transcript},
     success:function(response){
@@ -64,7 +64,7 @@ function updateTranscriptFile(codigo, final_transcript) {
 
 function insertNovaAula(codigo, descricao) {
   $.ajax({
-    url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
+    url: 'command_functions.php',
     type: 'POST',
     data: {command: 'new-aula', codigo: codigo, descricao: descricao},
     success:function(response){
@@ -78,7 +78,7 @@ function insertNovaAula(codigo, descricao) {
 
 function updateAovivo(codigo, aovivo) {
   $.ajax({
-    url: 'http://localhost/anywhere-meeting/src/prof-aovivo/command_functions.php',
+    url: 'command_functions.php',
     type: 'POST',
     data: {command: 'update-aovivo', codigo: codigo, aovivo: aovivo},
     success:function(response){

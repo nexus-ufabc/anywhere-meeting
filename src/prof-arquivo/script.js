@@ -4,7 +4,7 @@ function editAulaOnClick(id) {
 
 function deleteAulaOnClick(id) {
   $.ajax({
-    url: 'http://localhost/anywhere-meeting/src/prof-arquivo/command_functions.php',
+    url: 'command_functions.php',
     type: 'POST',
     data: {command: 'delete', id: id},
     success:function(response){
