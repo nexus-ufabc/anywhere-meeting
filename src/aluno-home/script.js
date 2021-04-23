@@ -3,9 +3,9 @@ function aoVivo_Click() {
 }
 
 function verArquivo_Click() {
-        window.location.href = "../aluno-arquivo/index.html";
+        window.location.href = "../aluno-arquivo/index.php";
 }
 
 function sobreNos_Click() {
-        window.location.href = "../aluno-sobrenos/index.html";
+        window.location.href = "../aluno-sobrenos/index.php";
 }

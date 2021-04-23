@@ -12,7 +12,8 @@
     <link defer href="./css/main.css" rel="stylesheet" />
     <title>Anywhere Meeting :: Aluno - Ver aquivo</title>
   </head>
-  <script defer type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
   <body>
     <div class="v37_658">
       <span class="v37_673">Upload de transcrição</span
@@ -22,12 +23,43 @@
       >
       <div class="v37_682">
         <div class="v37_683"></div>
-        <span class="v37_684"
-          >“Kanban” por Paulo Castro “Scrum” por Paulo Castro “Design” por Paulo
-          Castro “Métricas ágeis” por Paulo Castro</span
-        ><span class="v37_685"
-          >20/02/2021 21/02/2021 22/02/2021 23/02/2021</span
-        >
+        <span class="v37_684">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <?php
+            include "../bd.php";
+            $conn = getConn();
+
+            $sql = "SELECT * FROM Aulas WHERE IdProfessor = 1";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+              // output data of each row
+              while($row = mysqli_fetch_assoc($result)) {
+                  printf("<tr>");
+                  printf("<td>%s</td>", $row["Descricao"]);
+                  printf("<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>");
+                  printf("<td>");
+                  printf("<a href='javascript:editAulaOnClick(%d);'>", $row["Id"]);
+                  printf("<img src='./images/v49_160.png' width='20' height='25'>");
+                  printf("</a>");
+                  printf("</td>");
+                  printf("<td>&nbsp;&nbsp;&nbsp;</td>");
+                  printf("<td>");
+                  printf("<a href='javascript:deleteAulaOnClick(%d);'>", $row["Id"]);
+                  printf("<img src='./images/v49_159.png' width='20' height='25'>");
+                  printf("</a>");
+                  printf("</td>");
+                  //printf("<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>");
+                  //printf("<td>%s</td>", $row["Data"]);
+                  printf("</tr>");        
+                }
+            } else {
+                echo "0 results";
+            }
+            
+            mysqli_close($conn);
+          ?>
+          </table>
+        </span>
       </div>
       <span class="v37_675"
         >Selecione uma aula listada abaixo para iniciar sua transmissão</span
