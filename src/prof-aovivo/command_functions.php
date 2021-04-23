@@ -1,18 +1,9 @@
 <?php
-  $servername = "127.0.0.1";
-  $username = "adminawm";
-  $password = "@dminAWM123";
-  $dbname = "DBAWM";
-
+  include "../bd.php";
+  $conn = getConn();
+  
   if (isset($_POST['command']) && !empty($_POST['command'])) {  
     $command = $_POST['command'];
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        echo "Error: <br>" . $conn->connect_error;          
-        die("Connection failed: " . $conn->connect_error);
-    } 
 
     switch ($command) {
       case 'new-aula':

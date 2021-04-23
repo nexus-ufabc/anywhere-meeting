@@ -27,18 +27,8 @@
         <span class="v49_104">
           <table border="0" cellspacing="0" cellpadding="0">
           <?php
-            $servername = "127.0.0.1";
-            $username = "adminawm";
-            $password = "@dminAWM123";
-            $dbname = "DBAWM";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-                echo "Error: <br>" . $conn->connect_error;          
-                die("Connection failed: " . $conn->connect_error);
-            } 
+            include "../bd.php";
+            $conn = getConn();
 
             $sql = "SELECT * FROM Aulas WHERE IdProfessor = 1";
             $result = mysqli_query($conn, $sql);

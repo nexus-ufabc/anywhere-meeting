@@ -25,18 +25,8 @@
       <div class="v41_3">
         <div class="v41_4">
         <?php
-          $servername = "127.0.0.1";
-          $username = "adminawm";
-          $password = "@dminAWM123";
-          $dbname = "DBAWM";
-
-          // Create connection
-          $conn = new mysqli($servername, $username, $password, $dbname);
-          // Check connection
-          if ($conn->connect_error) {
-              echo "Error: <br>" . $conn->connect_error;          
-              die("Connection failed: " . $conn->connect_error);
-          } 
+          include "../bd.php";
+          $conn = getConn();
 
           $transcript = "";
           $sql = "SELECT * FROM Aulas WHERE IdProfessor = 1 AND Aovivo = 1";
