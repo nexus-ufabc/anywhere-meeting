@@ -18,8 +18,10 @@
       <div class="v43_756">
         <div class="v43_757"></div>
         <span class="v43_758">
-          Nexus | Sociotechnical Systems Research Initiative</span
-        >
+        <a href="https://pesquisa.ufabc.edu.br/nexus/">
+          Nexus | Sociotechnical Systems Research Initiative
+        </a>
+        </span>
         <div class="v43_759"></div>
         <div class="v43_760"></div>
         <div class="v43_761"></div>
