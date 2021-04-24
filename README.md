@@ -33,10 +33,10 @@ Assuming a server is going to be configured:
 
 ```console
     $ git clone https://github.com/nexus-ufabc/anywhere-meeting.git
-    $ cd anywhere-meeting
     $ sudo cp -a anywhere-meeting/src/. /var/www/html/
     $ sudo mkdir /var/www/setup
     $ sudo cp -a anywhere-meeting/setup/config.ini /var/www/setup/config.ini
+    $ cd anywhere-meeting
 ```
 
 - Install and configure MySQL
