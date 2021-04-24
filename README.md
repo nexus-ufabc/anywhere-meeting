@@ -9,9 +9,9 @@ A web application that offers an alternative to follow video calls through textu
 
 # How to setup this project
 
-Once the dependencies are properly installed, follow the steps below:
+Assuming a server is going to be configured:
 
-- Assuming a server is going to be configured, install the dependencies
+- Install the dependencies
 
 ```console
     $ sudo apt-get update
