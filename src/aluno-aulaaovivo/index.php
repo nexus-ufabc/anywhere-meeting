@@ -54,7 +54,7 @@
           printf("<div class='v41_9'>");
           printf("<div class='v41_10'></div>");
           printf("<div class='v41_11'></div>");
-          printf("<span class='v41_12'>%s</span>", $transcript);
+          printf("<span class='v41_12'><textarea class='v41_12_2'>%s</textarea></span>", $transcript);
           printf("</div>");
 
           mysqli_close($conn);

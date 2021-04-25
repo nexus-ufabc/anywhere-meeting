@@ -65,7 +65,7 @@
       </div>
       <div class="v43_819">
         <div class="v43_804"></div>
-        <span class="v43_810">Felipe Genaro</span>
+        <span class="v43_810">Felipe Corniani de Genaro</span>
         <div class="v43_815"></div>
       </div>
       <div class="v43_820">
