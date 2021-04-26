@@ -88,6 +88,8 @@ The last setup script (poc.sql) is optional, however, you need to run it if you 
     $ sudo vi /var/www/setup/config.ini
 ```
 
+Finally, you are able to run this project according with the [Run instruction section](#how-to-run-this-project).
+
 ## License
 
 MIT [license](https://github.com/nexus-ufabc/anywhere-meeting/blob/main/LICENSE)
