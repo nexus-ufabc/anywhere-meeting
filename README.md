@@ -5,7 +5,7 @@ A web application that offers an alternative to follow video calls through textu
 # Dependencies
 
 - [MySQL](https://www.mysql.com/)
-- A PHP web server like [Apache](https://httpd.apache.org/)
+- A [PHP](https://www.php.net/) web server like [Apache](https://httpd.apache.org/)
 
 # How to run this project
 
