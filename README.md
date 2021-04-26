@@ -85,7 +85,7 @@ The last setup script (poc.sql) is optional, however, you need to run it if you 
 - Configure the ini file according with the database values
 
 ```console
-    $ vi setup/config.ini
+    $ sudo vi /var/www/setup/config.ini
 ```
 
 ## License
