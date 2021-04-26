@@ -17,7 +17,7 @@ Installation further details and directions can be done following the [setup sec
 
 # POC and first tests
 
-This project was validated using a proof of concept (POC) scenario, using two users: professor and student. The following logins are pre-configured in the system:
+This project was validated using a proof of concept (POC) scenario with two users: professor and student. The following logins are pre-configured in the system:
 
 <details>
     <summary>Professor</summary>
