@@ -13,7 +13,7 @@ As soon as the [Dependencies](#Dependencies) are installed properly, clone the p
 
 The [POC section](#poc-and-first-tests) provides how this project was validated using a proof of concept (POC) scenario.
 
-Installation further details and directions can be done following the [setup section](# How to setup this project).
+Installation further details and directions can be done following the [setup section](#how-to-setup-this-project).
 
 # POC and first tests
 
@@ -31,7 +31,7 @@ This project was validated using a proof of concept (POC) scenario, using two us
     <p>Password: 5678</p>
 </details>
 
-Don't forget to follow the instructions in the [setup section](# How to setup this project) in order to run the system correctly.
+Don't forget to follow the instructions in the [setup section](#how-to-setup-this-project) in order to run the system correctly.
 
 # How to setup this project
 
@@ -82,7 +82,7 @@ Don't forget to follow the instructions in the [setup section](# How to setup th
     mysql> EXIT;
 ```
 
-The last setup script (poc.sql) is optional, however, you need to run it if you want to test this app as the [POC section](# POC and first tests) explained.
+The last setup script (poc.sql) is optional, however, you need to run it if you want to test this app as the [POC section](#poc-and-first-tests) explained.
 
 - Configure the ini file according with the database values
 
