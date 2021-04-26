@@ -11,7 +11,7 @@ A web application that offers an alternative to follow video calls through textu
 
 As soon as the [Dependencies](#Dependencies) are installed properly, clone the project locally and start the project using the [index.html](https://github.com/nexus-ufabc/anywhere-meeting/blob/main/src/index.html) file inside the folder anywhere-meeting/src/index.html.
 
-The [POC section](# POC and first tests) provides how this project was validated using a proof of concept (POC) scenario.
+The [POC section](#POC and first tests) provides how this project was validated using a proof of concept (POC) scenario.
 
 Installation further details and directions can be done following the [setup section](# How to setup this project).
 
