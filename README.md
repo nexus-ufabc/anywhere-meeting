@@ -43,7 +43,7 @@ Don't forget to follow the instructions in the [Setup section](#how-to-setup-thi
     $ sudo chmod 777 /var/www/html/
 ```
 
-- Make sure SSL is running (Assuming a HTTPS server is going to be configured)
+- If you are not running this product locally, make sure SSL is configured in your server (HTTPS calls). This product uses the Chrome [Web Speech API](https://wicg.github.io/speech-api/), therefore, all server installations should run on HTTPS as stated [here](https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API).
 
 ```console
     $ sudo a2enmod ssl
