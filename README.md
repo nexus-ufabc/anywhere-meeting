@@ -9,7 +9,7 @@ A web application that offers an alternative to follow video calls through textu
 
 # How to run this project
 
-As soon as the [Dependencies](#Dependencies) are installed properly and the project is ready following the [setup section](#how-to-setup-this-project), start the project using the [index.html](https://github.com/nexus-ufabc/anywhere-meeting/blob/main/src/index.html) file inside the folder [anywhere-meeting/src](https://github.com/nexus-ufabc/anywhere-meeting/tree/main/src).
+As soon as the [Dependencies](#Dependencies) are installed properly and the project is ready following the [Setup section](#how-to-setup-this-project), start the project using the [index.html](https://github.com/nexus-ufabc/anywhere-meeting/blob/main/src/index.html) file inside the folder [anywhere-meeting/src](https://github.com/nexus-ufabc/anywhere-meeting/tree/main/src).
 
 The [POC section](#poc-and-first-tests) provides how this project was validated using a proof of concept (POC) scenario.
 
@@ -29,7 +29,7 @@ This project was validated using a proof of concept (POC) scenario with two user
     <p>Password: 5678</p>
 </details>
 
-Don't forget to follow the instructions in the [setup section](#how-to-setup-this-project) in order to run the system correctly.
+Don't forget to follow the instructions in the [Setup section](#how-to-setup-this-project) in order to run the system correctly.
 
 # How to setup this project
 
